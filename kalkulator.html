@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .calculator {
+        border: 1px solid #ccc;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+      }
+      input,
+      select,
+      button {
+        padding: 8px;
+        margin: 5px 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      .result {
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #e9e9e9;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+    <div class="calculator">
+      <form action="kalkulator.php" method="post">
+        <label for="angka1">Angka Pertama:</label>
+        <input type="number" name="angka1" id="angka1" required step="any" />
+
+        <label for="angka2">Angka Kedua:</label>
+        <input type="number" name="angka2" id="angka2" required step="any" />
+
+        <label for="operasi">Pilih Operasi:</label>
+        <select name="operasi" id="operasi">
+          <option value="tambah">Penjumlahan (+)</option>
+          <option value="kurang">Pengurangan (-)</option>
+          <option value="kali">Perkalian (×)</option>
+          <option value="bagi">Pembagian (÷)</option>
+        </select>
+
+        <button type="submit">Hitung</button>
+      </form>
+    </div>
+  </body>
+</html>
